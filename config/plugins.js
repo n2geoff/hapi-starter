@@ -12,5 +12,13 @@ module.exports = [
                 }
             }]
         }
+    },
+    {
+        register: require("inert"),
+        option: {}
+    },
+    {
+        register: require("blipp"),
+        option: {}
     }
 ];

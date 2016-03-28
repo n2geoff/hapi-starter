@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "nodemon index.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Geoff Doty",
+  "license": "ISC",
+  "dependencies": {
+      "blipp": "^2.3.0",
+      "inert": "^3.2.0"
+  },
+  "devDependencies": {
+      "nodemon": "^1.9.1"
+  }
 }
