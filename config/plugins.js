@@ -14,11 +14,19 @@ module.exports = [
         }
     },
     {
+        register: require("vision"),
+        options: {}
+    },
+    {
         register: require("inert"),
-        option: {}
+        options: {}
     },
     {
         register: require("blipp"),
-        option: {}
+        options: {}
+    },
+    {
+        register: require("tv"),
+        options: {}
     }
 ];
