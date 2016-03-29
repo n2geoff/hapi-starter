@@ -26,6 +26,26 @@ module.exports = [
         }
     },
     {
+        path: "/users/{id}",
+        method: "GET",
+        config: {
+            tags: ["api", "users"],
+            description: "return user record by index",
+            validate: {
+                params: {
+                    id: Joi.number()
+                }
+            }
+        },
+        handler: function(request, reply) {
+         
+            //caputre index
+            let id = request.params.id;
+         
+            reply(records[id]);
+        }
+    },
+    {
         path: "/users",
         method: "POST",
         config: {
@@ -40,6 +60,50 @@ module.exports = [
             //add user record
             records.push(request.payload);
          
+            reply(records);
+        }
+    },
+    {
+        path: "/users/{id}",
+        method: "PUT",
+        config: {
+            tags: ['api', 'users'],
+            description: "replace user record",
+            validate: {
+                payload: schema
+            }
+        },
+        handler: function(request, reply) {
+
+            //caputre index
+            let id = request.params.id;
+
+            //replace indexed record
+            records[id] = request.payload;
+
+            //return record
+            reply(request.payload);
+        }
+    },
+    {
+        path: "/users/{id}",
+        method: "DELETE",
+        config: {
+            tags: ['api', 'users'],
+            description: "delete user",
+            validate: {
+                params: {
+                    index: Joi.number()
+                }
+            }
+        },
+        handler: function(request, reply) {
+
+            //caputre index
+            let id = request.params.id;
+
+            records.splice(id, 1);
+
             reply(records);
         }
     }
