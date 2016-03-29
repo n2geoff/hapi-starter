@@ -28,5 +28,9 @@ module.exports = [
     {
         register: require("tv"),
         options: {}
+    },
+    {
+        register: require("hapi-swagger"),
+        options: {}
     }
 ];
