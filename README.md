@@ -2,6 +2,8 @@
 
 This repo aims to both learn and quick start a hapi project with the following features
 
+## Features
+
 - Automated Swagger/OpenAPI Documentation
 - Tests using Lab & Code
 - Plugins to provide debugging functionality, such as
@@ -17,10 +19,10 @@ This repo aims to both learn and quick start a hapi project with the following f
 
 ## Configuration
 
-# Authors
-
 # License
 
 MIT
 
-# Acknowledgments
+# Resources
+
+- HAPI Homepage
