@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
 module.exports = [
     {
-        register: require("good"),
+        register: require('good'),
         options: {
             reporters: [{
                 reporter: require('good-console'),
@@ -14,23 +14,23 @@ module.exports = [
         }
     },
     {
-        register: require("vision"),
+        register: require('vision'),
         options: {}
     },
     {
-        register: require("inert"),
+        register: require('inert'),
         options: {}
     },
     {
-        register: require("blipp"),
+        register: require('blipp'),
         options: {}
     },
     {
-        register: require("tv"),
+        register: require('tv'),
         options: {}
     },
     {
-        register: require("hapi-swagger"),
+        register: require('hapi-swagger'),
         options: {}
     }
 ];

@@ -8,7 +8,19 @@ This repo aims to both learn and quick start a hapi project with the following f
     - blipp
     - tv
     - good
-    
-# Installation
+ 
+# Getting Started
+  
+## Installation
 
     git clone https://gogs.randomremains.com/geoff/hapi-starter.git
+
+## Configuration
+
+# Authors
+
+# License
+
+MIT
+
+# Acknowledgments
