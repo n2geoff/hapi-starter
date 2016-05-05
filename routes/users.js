@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 //in-memory database
 var records = [];
 
 //dependencies
-const Joi = require("joi");
+const Joi = require('joi');
 
 //schema
 var schema = Joi.object().keys({
@@ -14,11 +14,11 @@ var schema = Joi.object().keys({
 
 module.exports = [
     {
-        path: "/users",
-        method: "GET",
+        path: '/users',
+        method: 'GET',
         config: {
-            tags: ["api", "users"],
-            description: "return all user records"
+            tags: ['api', 'users'],
+            description: 'return all user records'
         },
         handler: function(request, reply) {
          
@@ -26,11 +26,11 @@ module.exports = [
         }
     },
     {
-        path: "/users/{id}",
-        method: "GET",
+        path: '/users/{id}',
+        method: 'GET',
         config: {
-            tags: ["api", "users"],
-            description: "return user record by index",
+            tags: ['api', 'users'],
+            description: 'return user record by index',
             validate: {
                 params: {
                     id: Joi.number()
@@ -46,11 +46,11 @@ module.exports = [
         }
     },
     {
-        path: "/users",
-        method: "POST",
+        path: '/users',
+        method: 'POST',
         config: {
-            tags: ["api", "users"],
-            description: "add user record",
+            tags: ['api', 'users'],
+            description: 'add user record',
             validation: {
                 payload: schema
             }
@@ -64,11 +64,11 @@ module.exports = [
         }
     },
     {
-        path: "/users/{id}",
-        method: "PUT",
+        path: '/users/{id}',
+        method: 'PUT',
         config: {
             tags: ['api', 'users'],
-            description: "replace user record",
+            description: 'replace user record',
             validate: {
                 payload: schema
             }
@@ -86,11 +86,11 @@ module.exports = [
         }
     },
     {
-        path: "/users/{id}",
-        method: "DELETE",
+        path: '/users/{id}',
+        method: 'DELETE',
         config: {
             tags: ['api', 'users'],
-            description: "delete user",
+            description: 'delete user',
             validate: {
                 params: {
                     index: Joi.number()

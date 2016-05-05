@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
 module.exports = [
     {
-        path: "/public/{path*}",
-        method: "GET",
+        path: '/public/{path*}',
+        method: 'GET',
         handler: {
             directory: {
-                path: "./public",
+                path: './public',
                 index: false,
                 listing: true
             }
