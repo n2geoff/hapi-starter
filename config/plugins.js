@@ -4,13 +4,13 @@ module.exports = [
     {
         register: require('good'),
         options: {
-            reporters: [{
-                reporter: require('good-console'),
-                events: {
-                    response: '*',
-                    log: '*'
-                }
-            }]
+            ops: false,
+            reporters: {
+                console: [{
+                    module: 'good-console',
+                    args: [{ log: '*', response: '*' }]
+                }, 'stdout']
+            }
         }
     },
     {
