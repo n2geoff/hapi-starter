@@ -61,11 +61,11 @@
         "no-ex-assign": "error",
         "no-var": "error",
         "prefer-arrow-callback": "error",
-        "prefer-const": "error",
+        "prefer-const": 0,
         "indent": ["error", 4, { "SwitchCase": 1 }],
-        "space-before-function-paren": ["error", { "anonymous": "always", "named": "never" }],
+        "space-before-function-paren": [0, { "anonymous": "always", "named": "never" }],
         "func-style": ["error", "expression"],
-        "object-curly-spacing": ["error", "always"],
+        "object-curly-spacing": ["error", "never"],
         "no-unsafe-finally": "error",
         "no-useless-computed-key": "error"
     }
