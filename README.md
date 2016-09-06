@@ -31,7 +31,7 @@ install dependencies via
 
 	`npm update`
 
-start the app via 
+start the app via
 
 	`npm start`
 
@@ -43,8 +43,8 @@ visit your API running at `http://127.0.0.1:8000/` in [POSTMAN](https://www.getp
 
 For **illustration purposes only**, this code base comes with a `routes/tasks.js` file designed to test an in-memory RESTful `/tasks` resource.  This is the quickest way to identify benefits this simple setup provides, such as
 
-- Generated Open API documentation: [](http://127.0.0.1:8000/documention)
-- Interactive Debugging: [](http://127.0.0.1:8000/debug/console)
+- Generated Open API documentation: [http://127.0.0.1:8000/documention]()
+- Interactive Debugging: [http://127.0.0.1:8000/debug/console]()
 - See how validations work (try not including a task or adding additional keys)
 - See how testing works `npm test` see `test/tasks.test.js`
 
@@ -63,7 +63,7 @@ For **illustration purposes only**, this code base comes with a `routes/tasks.js
 
 ### Example
 
-Request 
+Request
 ```
 POST /tasks
 {
@@ -77,7 +77,7 @@ Response
 [
   {
     "task": "This is my Task",
-	"completed": false	
+	"completed": false
   }
 ]
 ```
