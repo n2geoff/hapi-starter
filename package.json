@@ -1,6 +1,6 @@
 {
   "name": "hapi-starter",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "simple hapijs starter seed",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository":{
       "type": "git",
-      "url": "https://gogs.randomremains.com/geoff/hapi-starter"
+      "url": "https://github.com/n2geoff/hapi-starter"
   },
   "dependencies": {
     "blipp": "^2.3.0",
