@@ -7,7 +7,7 @@ let records = [];
 const Joi = require('joi');
 
 //schema
-const schema = Joi.object().keys({
+let schema = Joi.object().keys({
     task: Joi.string().min(3).max(64).required(),
     completed: Joi.boolean().default(false)
 });
@@ -20,7 +20,7 @@ module.exports = [
             tags: ['api', 'tasks'],
             description: 'return all tasks'
         },
-        handler: function(request, reply) {
+        handler: function (request, reply) {
 
             reply(records);
         }
@@ -32,7 +32,7 @@ module.exports = [
             tags: ['api', 'tasks'],
             description: 'returns the number of tasks'
         },
-        handler: function(request, reply) {
+        handler: function (request, reply) {
 
             reply({'count': records.length});
         }
@@ -44,7 +44,7 @@ module.exports = [
             tags: ['api', 'tasks'],
             description: 'returns the number of active tasks'
         },
-        handler: function(request, reply) {
+        handler: function (request, reply) {
 
             let active = records.filter((item) => item.completed === false);
 
@@ -58,7 +58,7 @@ module.exports = [
             tags: ['api', 'tasks'],
             description: 'returns the number of completed tasks'
         },
-        handler: function(request, reply) {
+        handler: function (request, reply) {
 
             let completed = records.filter((item) => item.completed === true);
 
@@ -77,7 +77,7 @@ module.exports = [
                 }
             }
         },
-        handler: function(request, reply) {
+        handler: function (request, reply) {
 
             //caputre index
             let id = request.params.id;
@@ -98,7 +98,7 @@ module.exports = [
                 payload: schema
             }
         },
-        handler: function(request, reply) {
+        handler: function (request, reply) {
 
             //add user record
             records.push(request.payload);
@@ -116,7 +116,7 @@ module.exports = [
                 payload: schema
             }
         },
-        handler: function(request, reply) {
+        handler: function (request, reply) {
 
             //caputre index
             let id = request.params.id;
@@ -140,7 +140,7 @@ module.exports = [
                 }
             }
         },
-        handler: function(request, reply) {
+        handler: function (request, reply) {
 
             //caputre index
             let id = request.params.id;

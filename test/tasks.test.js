@@ -1,8 +1,8 @@
 'use strict';
 
 //load dependencies
-const Lab  = require('lab');
-const Code = require('code');
+let Lab  = require('lab');
+let Code = require('code');
 
 let server = require('../index');
 
