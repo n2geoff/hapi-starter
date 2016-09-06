@@ -1,9 +1,11 @@
 'use strict';
 
+//requirements
 const Hapi = require('hapi');
 
+//server configuration
 const server = new Hapi.Server();
-server.connection({ port: 8000 });
+server.connection({port: 8000});
 
 server.register(require('./config/plugins'), (err) => {
     if (err) {
@@ -12,7 +14,7 @@ server.register(require('./config/plugins'), (err) => {
 
     // register routes
     server.route(require('./routes/public'));
-    server.route(require('./routes/users'));
+    server.route(require('./routes/tasks'));
 
     // start server
     server.start(() => {
@@ -20,4 +22,5 @@ server.register(require('./config/plugins'), (err) => {
     });
 });
 
+//testing tie-in
 module.exports = server;

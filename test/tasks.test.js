@@ -15,7 +15,7 @@ let before   = lab.before;
 let after    = lab.after;
 let expect   = Code.expect;
 
-describe('User API Resource', () => {
+describe('Task API Resource', () => {
 
     before((done) => {
 
@@ -24,13 +24,31 @@ describe('User API Resource', () => {
 
     it('should initialize with no records', (done) => {
         server.inject({
-            url: '/users',
+            url: '/tasks',
             method: 'GET'
         }, (response) => {
             let result = response.result;
 
             expect(response.statusCode).to.equal(200);
             expect(result).to.have.length(0);
+
+            done();
+        });
+    });
+
+    it('should accept a new task', (done) => {
+        server.inject({
+            url: '/tasks',
+            method: 'POST',
+            payload: {
+                'task': 'add a test task',
+                'completed': false
+            }
+        }, (response) => {
+            let result = response.result;
+
+            expect(response.statusCode).to.equal(200);
+            expect(result).to.have.length(1);
 
             done();
         });
