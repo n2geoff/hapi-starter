@@ -1,5 +1,7 @@
 # HAPI Starter:  Simple HapiJS Starter Seed
 
+![dependencies](https://david-dm.org/n2geoff/hapi-starter.svg)
+
 A simple HapiJS project quick-starter with API centric focused features
 
 ## Features
