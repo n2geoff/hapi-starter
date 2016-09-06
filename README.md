@@ -90,7 +90,6 @@ Response
 - add more tests
 - replace config/plugins.js with `glue`
 - move core folders into `src` directory
-- tweak `eslint`
 
 # Resources
 
