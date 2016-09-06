@@ -2,13 +2,13 @@
 
 module.exports = [
     {
-        path: '/public/{path*}',
+        path: '/{path*}',
         method: 'GET',
         handler: {
             directory: {
                 path: './public',
-                index: false,
-                listing: true
+                index: true,
+                listing: false
             }
         }
     }
