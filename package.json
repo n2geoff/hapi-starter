@@ -2,9 +2,9 @@
   "name": "hapi-starter",
   "version": "0.5.1",
   "description": "simple hapijs starter seed",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon index.js",
+    "start": "./node_modules/.bin/nodemon src/index.js",
     "test": "lab -c -v test"
   },
   "keywords": [
@@ -13,9 +13,9 @@
   ],
   "author": "Geoff Doty",
   "license": "MIT",
-  "repository":{
-      "type": "git",
-      "url": "https://github.com/n2geoff/hapi-starter"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n2geoff/hapi-starter"
   },
   "dependencies": {
     "blipp": "^2.3.0",
@@ -29,11 +29,11 @@
     "vision": "^4.1.0"
   },
   "devDependencies": {
-    "code": "^3.0.2",
-    "lab": "^11.0.1",
+    "code": "^4.0.0",
+    "lab": "^11.1.0",
     "nodemon": "^1.10.2"
   },
   "engines": {
-    "node": "6.5.0"
+    "node": "6.9.1"
   }
 }

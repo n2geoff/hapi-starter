@@ -4,7 +4,7 @@
 let Lab  = require('lab');
 let Code = require('code');
 
-let server = require('../index');
+let server = require('../src/index');
 
 let lab = exports.lab = Lab.script();
 
