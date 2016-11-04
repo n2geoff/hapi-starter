@@ -1,5 +1,6 @@
 {
 	"preset": "crockford",
 	"requireSpaceAfterKeywords": false,
-	"requireMultipleVarDecl": false
+	"requireMultipleVarDecl": false,
+	"requireSpacesInAnonymousFunctionExpression": false
 }
