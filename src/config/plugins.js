@@ -32,5 +32,9 @@ module.exports = [
     {
         register: require('hapi-swagger'),
         options: {}
+    },
+    {
+        register: require('hapi-auth-basic'),
+        options: {}
     }
 ];

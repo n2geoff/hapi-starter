@@ -1,7 +1,8 @@
 'use strict';
 
 //requirements
-const Hapi = require('hapi');
+const Hapi  = require('hapi');
+const basic = require('./lib/security').basic;
 
 //server configuration
 let server = new Hapi.Server();
@@ -12,9 +13,13 @@ server.register(require('./config/plugins'), (err) => {
         return console.log(err);
     }
 
+    //register auth
+    server.auth.strategy('basic', 'basic', { validateFunc: basic.validate });
+
     // register routes
     server.route(require('./routes/public'));
     server.route(require('./routes/tasks'));
+    server.route(require('./routes/users'));
 
     // start server
     server.start(() => {
