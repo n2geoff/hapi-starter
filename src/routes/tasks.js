@@ -16,7 +16,7 @@ module.exports = [
     {
         path: "/tasks",
         method: "GET",
-        config: {
+        options: {
             tags: ["api", "tasks"],
             description: "return all tasks"
         },
@@ -28,7 +28,7 @@ module.exports = [
     {
         path: "/tasks/count",
         method: "GET",
-        config: {
+        options: {
             tags: ["api", "tasks"],
             description: "returns the number of tasks"
         },
@@ -40,7 +40,7 @@ module.exports = [
     {
         path: "/tasks/active",
         method: "GET",
-        config: {
+        options: {
             tags: ["api", "tasks"],
             description: "returns the number of active tasks"
         },
@@ -54,7 +54,7 @@ module.exports = [
     {
         path: "/tasks/completed",
         method: "GET",
-        config: {
+        options: {
             tags: ["api", "tasks"],
             description: "returns the number of completed tasks"
         },
@@ -68,7 +68,7 @@ module.exports = [
     {
         path: "/tasks/{id}",
         method: "GET",
-        config: {
+        options: {
             tags: ["api", "tasks"],
             description: "return task by index",
             validate: {
@@ -88,7 +88,7 @@ module.exports = [
     {
         path: "/tasks",
         method: "POST",
-        config: {
+        options: {
             tags: ["api", "tasks"],
             description: "add task record",
             validate: {
@@ -109,7 +109,7 @@ module.exports = [
     {
         path: "/tasks/{id}",
         method: "PUT",
-        config: {
+        options: {
             tags: ["api", "tasks"],
             description: "replace existing task",
             validate: {
@@ -131,7 +131,7 @@ module.exports = [
     {
         path: "/tasks/{id}",
         method: "DELETE",
-        config: {
+        options: {
             tags: ["api", "tasks"],
             description: "delete user",
             validate: {
