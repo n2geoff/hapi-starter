@@ -1,26 +1,33 @@
-'use strict';
+"use strict";
 
 //requirements
-const Hapi = require('hapi');
+const Hapi = require("hapi");
 
 //server configuration
-let server = new Hapi.Server();
-server.connection({port: 8000});
+const server = new Hapi.Server({
+    port: 8000,
+    host: "localhost"
+});
 
-server.register(require('./config/plugins'), (err) => {
-    if (err) {
-        return console.log(err);
-    }
+const start = async () => {
+
+    // register plugins
+    await server.register(require("./config/plugins"));
 
     // register routes
-    server.route(require('./routes/public'));
-    server.route(require('./routes/tasks'));
+    server.route(require("./routes/public"));
+    server.route(require("./routes/tasks"));
 
-    // start server
-    server.start(() => {
-        console.log('API up and running at:', server.info.uri);
-    });
+    await server.start();
+    console.log("API up and running at:", server.info.uri);
+}
+
+process.on("unHandledRejection", (err) => {
+    console.log(err);
+    process.exit(1);
 });
 
 //testing tie-in
 module.exports = server;
+
+start();

@@ -1,36 +1,38 @@
-'use strict';
+"use strict";
 
 module.exports = [
     {
-        register: require('good'),
+        plugin: require("good"),
         options: {
             ops: false,
             reporters: {
                 console: [{
-                    module: 'good-console',
-                    args: [{ log: '*', response: '*' }]
-                }, 'stdout']
+                    module: "good-squeeze",
+                    name: "Squeeze",
+                    args: [{
+                        log: "*",
+                        response: "*"
+                    }]
+                }, {
+                    module: "good-console"
+                }, "stdout"]
             }
         }
     },
     {
-        register: require('vision'),
+        plugin: require("inert"),
         options: {}
     },
     {
-        register: require('inert'),
+        plugin: require("vision"),
         options: {}
     },
     {
-        register: require('blipp'),
+        plugin: require("blipp"),
         options: {}
     },
     {
-        register: require('tv'),
-        options: {}
-    },
-    {
-        register: require('hapi-swagger'),
+        plugin: require("hapi-swagger"),
         options: {}
     }
 ];

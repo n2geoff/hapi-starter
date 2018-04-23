@@ -1,5 +1,7 @@
 # HAPI Starter:  Simple HapiJS Starter Seed
 
+HAPI Version: 17.x
+
 ![dependencies](https://david-dm.org/n2geoff/hapi-starter.svg)
 
 A simple HapiJS project quick-starter with API centric focused features
@@ -10,12 +12,11 @@ A simple HapiJS project quick-starter with API centric focused features
 - Tests using `lab` & `code`
 - Plugins to provide debugging functionality, such as
     - `blipp`: display the routes table at startup
-    - `tv`: Interactive debug console
     - `good/good-console`: process monitoring
 - Additional plugins
     - `inert`: static file and directory handler
     - `joi`: object schema validation
-    - `vision`: template rendering (used by `tv`)
+    - `vision`: template rendering (used by `hapi-swagger`)
 
 # Getting Started
 
@@ -46,7 +47,6 @@ visit your API running at `http://127.0.0.1:8000/` in [POSTMAN](https://www.getp
 For **illustration purposes only**, this code base comes with a `routes/tasks.js` file designed to test an in-memory RESTful `/tasks` resource.  This is the quickest way to identify benefits this simple setup provides, such as
 
 - Generated Open API documentation: http://127.0.0.1:8000/documention
-- Interactive Debugging: http://127.0.0.1:8000/debug/console
 - See how validations work (try not including a task or adding additional keys)
 - See how testing works `npm test` see `test/tasks.test.js`
 
@@ -92,6 +92,8 @@ Response
 - add more tests
 - replace config/plugins.js with `glue`
 - move core folders into `src` directory
+- look at `wurst` for loading routes from a directory
+- add a security foundation 
 
 # Resources
 
