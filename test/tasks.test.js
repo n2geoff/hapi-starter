@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 //load dependencies
-let Lab  = require('lab');
-let Code = require('code');
+let Lab  = require("lab");
+let Code = require("code");
 
-let server = require('../index');
+let server = require("../src/index");
 
 let lab = exports.lab = Lab.script();
 
@@ -15,42 +15,45 @@ let before   = lab.before;
 let after    = lab.after;
 let expect   = Code.expect;
 
-describe('Task API Resource', () => {
+describe("Task API Resource", () => {
 
-    before((done) => {
-
-        done();
-    });
-
-    it('should initialize with no records', (done) => {
+    it("should initialize with no records", () => {
         server.inject({
-            url: '/tasks',
-            method: 'GET'
+            url: "/tasks",
+            method: "GET"
         }, (response) => {
             let result = response.result;
 
             expect(response.statusCode).to.equal(200);
             expect(result).to.have.length(0);
-
-            done();
         });
     });
 
-    it('should accept a new task', (done) => {
+    it("should initialize with no records", () => {
         server.inject({
-            url: '/tasks',
-            method: 'POST',
+            url: "/tasks/count",
+            method: "GET"
+        }, (response) => {
+            let result = response.result;
+
+            expect(response.statusCode).to.equal(200);
+            expect(result).to.have.length(0);
+        });
+    });
+
+    it("should accept a new task", () => {
+        server.inject({
+            url: "/tasks",
+            method: "POST",
             payload: {
-                'task': 'add a test task',
-                'completed': false
+                "task": "add a test task",
+                "completed": false
             }
         }, (response) => {
             let result = response.result;
 
             expect(response.statusCode).to.equal(200);
             expect(result).to.have.length(1);
-
-            done();
         });
     });
 
